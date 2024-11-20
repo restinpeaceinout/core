@@ -7,14 +7,18 @@
   "module": "dist/hyperdeploy.mjs",
   "scripts": {
     "build": "microbundle --target=node --f es,cjs",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Eric Simons",
   "license": "MIT",
   "dependencies": {
-    "firebase-tools": "^6.0.0"
+    "firebase-tools": "^6.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "microbundle": "^0.7.0"
-  }
+  },
+  "snyk": true
 }
